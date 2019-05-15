@@ -8,3 +8,27 @@
     font-family: "Roboto";
     src: url(../fonts/Roboto-Regular.ttf);
 }*/
+
+@font-face {
+  font-family: OpenSans700;
+  src: url(../fonts/OpenSans-400.woff2) format("woff2"), url(../fonts/OpenSans-400.woff) format("woff"), url(../fonts/OpenSans-400.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans700;
+  src: url(../fonts/OpenSans-700.woff2) format("woff2"), url(../fonts/OpenSans-700.woff) format("woff"), url(../fonts/OpenSans-700.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Monts400;
+  src: url(../fonts/Montserrat-400.woff2) format("woff2"), url(../fonts/Montserrat-400.woff) format("woff"), url(../fonts/Montserrat-400.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Monts700;
+  src: url(../fonts/Montserrat-700.woff2) format("woff2"), url(../fonts/Montserrat-700.woff) format("woff"), url(../fonts/Montserrat-700.ttf) format("truetype");
+  font-style: normal;
+}
