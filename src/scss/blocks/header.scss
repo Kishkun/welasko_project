@@ -1,5 +1,137 @@
 @import "../utils/libs";
-@import "../utils/fonts";
 @import "../utils/vars";
 @import "../utils/mixins";
 
+.header-wrapper {
+  background-color: #F3F3F3;
+
+  .header-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 23px 0;
+    margin: 0 auto;
+
+    .header_left-part {
+      width: 560px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .phone_number-wrapper {
+        width: 290px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tel-block {
+          display: flex;
+          flex-direction: column;
+          padding-left: 35px;
+
+          .number-link {
+            font-weight: 700;
+            position: relative;
+          }
+
+          .mts-icon:after {
+            content: '';
+            position: absolute;
+            left: -52px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: url(../../build/img/viber_logo.svg) no-repeat center;
+          }
+
+          .mts-icon:before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: url(../../build/img/mts_logo.svg) no-repeat center;
+          }
+
+          .velcom-icon:before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: url(../../build/img/velcom_logo.svg) no-repeat center;
+          }
+        }
+
+        .time_work-block {
+          text-align: center;
+          line-height: 20px;
+        }
+
+        .time_work-part {
+          display: block;
+        }
+      }
+    }
+
+    .header_right-part {
+      width: 595px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header-link {
+        font-size: 14px;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .header-link:before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        width: 18px;
+        height: 18px;
+        background: url(../../build/img/call-answer.svg) no-repeat center;
+      }
+
+      .logIn-link:before {
+        left: -10px;
+        top: -3px;
+        background: url(../../build/img/user-silhouette.svg) no-repeat center;
+      }
+
+      .box-link:before {
+        left: -10px;
+        top: -3px;
+        background: url(../../build/img/shopping-purse-icon.svg) no-repeat center;
+      }
+
+      .call-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 40px;
+        border: 1px solid #FFE95D;
+        border-radius: 36px;
+        font-size: 12px;
+      }
+
+      .header_link-wrapper {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+
+      }
+
+      .box-amount {
+        font-weight: 700;
+      }
+    }
+  }
+}

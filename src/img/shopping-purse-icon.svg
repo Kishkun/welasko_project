@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.141" viewBox="0 0 16 16.141">
+  <g id="shopping-purse-icon" transform="translate(-0.21)">
+    <g id="Group_17" data-name="Group 17" transform="translate(0.21)">
+      <g id="Group_16" data-name="Group 16" transform="translate(0)">
+        <path id="Path_18" data-name="Path 18" d="M14.406,6.767a.673.673,0,0,0,.673-.673V3.472a2.127,2.127,0,0,1,4.254,0V6.095a.673.673,0,0,0,1.345,0V3.472a3.472,3.472,0,1,0-6.944,0V6.095A.672.672,0,0,0,14.406,6.767Z" transform="translate(-9.186)" fill="#363636"/>
+        <path id="Path_19" data-name="Path 19" d="M15.944,15.631h-3.57v.839a1.345,1.345,0,1,1-2.69,0v-.839H6.775v.839a1.345,1.345,0,1,1-2.69,0v-.839H.476a.251.251,0,0,0-.256.327l2.353,9.583a1.379,1.379,0,0,0,1.266.975h8.743a1.381,1.381,0,0,0,1.267-.975L16.2,15.958A.252.252,0,0,0,15.944,15.631Z" transform="translate(-0.21 -10.375)" fill="#363636"/>
+      </g>
+    </g>
+  </g>
+</svg>

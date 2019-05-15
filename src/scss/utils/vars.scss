@@ -3,14 +3,17 @@ $mainFont                : 'Open-sans', Helvetica, Arial, sans-serif;
 // color
 $white                   : #fff;
 $black                   : #000;
+$gray                    : #363636;
 $red                     : red;
 
 // Size
-$mainFontSize            : 16px;
+$mainFontSize            : 14px;
+$linkSize                : 16px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.4;
 
-$wrapperWidth            : 1366px;
+$wrapperWidth            : 1520px;
+$siteWidth               : 1280px;
 $lgDesktopWidth          : 1360px;
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 1023px;

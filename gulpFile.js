@@ -28,9 +28,6 @@ const jsFiles = [
 const imgFiles = [
     './src/img/**/*.{jpg,jpeg,png,svg}'
 ];
-const fontsFiles = [
-    './src/fonts/**/*.{woff,woff2}'
-];
 
 function images() {
     return gulp.src(imgFiles)
@@ -88,11 +85,6 @@ function script() {
         .pipe(browserSync.stream())
 }
 
-function fonts() {
-    return gulp.src(fontsFiles)
-        .pipe(gulp.dest('./build/fonts'))
-}
-
 function watch() {
     browserSync.init({
         server: {
@@ -105,7 +97,6 @@ function watch() {
     });
     // gulp.watch('./src/css/**/*.css', style);
     gulp.watch('./src/img/**/*.{jpg,jpeg,png,svg}', images);
-    gulp.watch('./src/fonts/**/*.{woff,woff2}', fonts);
     gulp.watch('./src/scss/**/*.scss', sassToCSS);
     gulp.watch('./src/js/**/*.js', script);
     gulp.watch("./*.html").on('change', browserSync.reload);
@@ -115,13 +106,12 @@ function clean() {
     return del(['build/*'])
 }
 
-gulp.task('fonts', fonts);
 gulp.task('images', images);
 gulp.task('sass', sassToCSS);
 // gulp.task('style', style);
 gulp.task('script', script);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean,
-    gulp.parallel(images, fonts, sassToCSS, script)  //sassToCSS
+    gulp.parallel(images, sassToCSS, script)  //sassToCSS
 ));
 gulp.task('dev', gulp.series('build', 'watch'));
