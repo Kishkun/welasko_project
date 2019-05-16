@@ -21,3 +21,15 @@
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+@mixin flexible () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -3,26 +3,21 @@
 @import "../utils/mixins";
 
 .header-wrapper {
-  background-color: #F3F3F3;
+  background: #F3F3F3;
 
   .header-body {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween();
     padding: 20px 0 23px 0;
     margin: 0 auto;
 
     .header_left-part {
       width: 560px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flexBetween();
 
       .phone_number-wrapper {
         width: 290px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexBetween();
 
         .tel-block {
           display: flex;
@@ -78,53 +73,71 @@
 
     .header_right-part {
       width: 595px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flexBetween();
 
       .header-link {
-        font-size: 14px;
+        font-size: rem(14);
         padding-left: 15px;
         position: relative;
       }
 
-      .header-link:before {
+      .logIn-link:before {
         content: '';
         position: absolute;
-        left: 15px;
-        top: 10px;
         width: 18px;
         height: 18px;
-        background: url(../../build/img/call-answer.svg) no-repeat center;
-      }
-
-      .logIn-link:before {
         left: -10px;
         top: -3px;
         background: url(../../build/img/user-silhouette.svg) no-repeat center;
       }
 
       .box-link:before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
         left: -10px;
         top: -3px;
         background: url(../../build/img/shopping-purse-icon.svg) no-repeat center;
       }
 
       .call-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexible();
         width: 180px;
         height: 40px;
-        border: 1px solid #FFE95D;
+        border: 1px solid $yellow;
         border-radius: 36px;
-        font-size: 12px;
+        font-size: rem(12);
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 15px;
+          top: 10px;
+          width: 18px;
+          height: 18px;
+          background: url(../../build/img/call-answer.svg) no-repeat center;
+        }
+
+        &:hover::before {
+          animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+        }
+        @keyframes trambling-animation {
+          0%, 50%, 100% {
+            transform: rotate(0deg);
+          }
+          10%, 30% {
+            transform: rotate(-10deg);
+          }
+          20%, 40% {
+            transform: rotate(10deg);
+          }
+        }
       }
 
       .header_link-wrapper {
         width: 280px;
-        display: flex;
-        justify-content: space-between;
+        @include flexBetween();
         padding-left: 20px;
 
       }
