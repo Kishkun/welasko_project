@@ -467,48 +467,57 @@ body {
     margin: 0 auto;
     margin-top: 27px;
 
-    .linen-block {
-      width: 450px;
-      height: 474px;
-      background: url(../../build/img/postelnoe.jpg) no-repeat center;
-      background-size: cover;
+    .hover_linen-block {
+      overflow: hidden;
+      .linen-block {
+        width: 450px;
+        height: 474px;
+        background: url(../../build/img/postelnoe.jpg) no-repeat center;
+        background-size: cover;
+        transition: all 1s ease-out;
 
-      .magazine-bg {
-        height: 100%;
-        width: 100%;
-        @include flexible();
-        background: #36363676;
+        &:hover {
+          transform: scale(1.1);
+        }
 
-        .magazine-content {
-          width: 150px;
-          height: 85px;
-          text-align: center;
-          position: relative;
+        .magazine-bg {
+          height: 100%;
+          width: 100%;
+          @include flexible();
+          background: #36363676;
 
-          &:hover::after {
-            transform: rotate(360deg);
-            transition: 1s;
-          }
+          .magazine-content {
+            width: 150px;
+            height: 85px;
+            text-align: center;
+            position: relative;
 
-          &:after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            bottom: 0;
-            left: 65px;
-            background: url(../../build/img/catalog_arrow.svg);
-            transition: 1s;
-          }
+            &:hover::after {
+              transform: rotate(360deg);
+              transition: 1s;
+            }
 
-          .magazine-title {
-            font-family: Montserrat, sans-serif;
-            @include title($white, rem(20), 700);
-            margin-bottom: 15px;
+            &:after {
+              content: '';
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              bottom: 0;
+              left: 65px;
+              background: url(../../build/img/catalog_arrow.svg);
+              transition: 1s;
+            }
 
+            .magazine-title {
+              font-family: Montserrat, sans-serif;
+              @include title($white, rem(20), 700);
+              margin-bottom: 15px;
+
+            }
           }
         }
       }
+
     }
 
     .remain-block {
@@ -516,34 +525,65 @@ body {
       @include flexBetween();
       flex-wrap: wrap;
 
-      .sofa-block {
-        width: 400px;
-        height: 237px;
-        background: url(../../build/img/divandeki.jpg) no-repeat center;
-        background-size: cover;
+      .hover_remain-block {
+        overflow: hidden;
         margin-bottom: 15px;
-      }
 
-      .plaid-block {
-        width: 400px;
-        height: 237px;
-        background: url(../../build/img/pled.jpg) no-repeat center;
-        background-size: cover;
-        margin-bottom: 15px;
-      }
+        .sofa-block {
+          width: 400px;
+          height: 237px;
+          background: url(../../build/img/divandeki.jpg) no-repeat center;
+          background-size: cover;
+          transition: all 1s ease-out;
 
-      .cover-block {
-        width: 400px;
-        height: 222px;
-        background: url(../../build/img/pokryvala.jpg) no-repeat center;
-        background-size: cover;
-      }
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
 
-      .case-block {
-        width: 400px;
-        height: 222px;
-        background: url(../../build/img/chehly.jpg) no-repeat center;
-        background-size: cover;
+        .plaid-block {
+          width: 400px;
+          height: 237px;
+          background: url(../../build/img/pled.jpg) no-repeat center;
+          background-size: cover;
+          transition: all 1s ease-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .cover-block {
+          width: 400px;
+          height: 222px;
+          background: url(../../build/img/pokryvala.jpg) no-repeat center;
+          background-size: cover;
+          transition: all 1s ease-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .case-block {
+          width: 400px;
+          height: 222px;
+          background: url(../../build/img/chehly.jpg) no-repeat center;
+          background-size: cover;
+          transition: all 1s ease-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(4) {
+          margin-bottom: 0;
+        }
       }
 
       .magazine-bg {
@@ -719,36 +759,44 @@ body {
       @include title($gray, rem(20), 700);
       text-align: center;
     }
+
     .news-content {
       width: 100%;
       @include flexBetween();
       margin: 0 auto;
       margin-top: 30px;
       padding-bottom: 30px;
+
       .news-block {
         width: 300px;
         height: 350px;
         background: $white;
         padding: 10px;
+
         .news-link {
           display: block;
           width: 280px;
           height: 164px;
           margin: 0 auto;
+
           .news-image {
             width: 100%;
             height: 100%;
           }
         }
+
         .news-caption {
           padding: 20px 10px 15px 10px;
+
           .news_caption-title {
             font-weight: 700;
             margin-bottom: 10px;
           }
+
           .news_caption-time {
             color: $ease-gray;
           }
+
           .news_caption-content {
             margin-top: 7px;
             line-height: 22px;
@@ -771,12 +819,12 @@ body {
         padding-right: 25px;
         position: relative;
 
-        &:hover::after{
+        &:hover::after {
           transform: rotate(360deg);
           transition: 1s;
         }
 
-        &:after{
+        &:after {
           content: '';
           position: absolute;
           right: 5px;
@@ -794,14 +842,17 @@ body {
       margin: 0 auto;
       margin-top: 55px;
       padding-bottom: 60px;
+
       .ceo-title {
         @include title($gray, rem(20), 700);
         margin-bottom: 20px;
       }
-      .ceo-text{
+
+      .ceo-text {
         @include title($gray-light, rem(12), 400);
         line-height: 21px;
-        .ceo-text-p{
+
+        .ceo-text-p {
           margin-bottom: 25px;
         }
       }
