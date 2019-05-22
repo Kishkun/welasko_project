@@ -108,7 +108,7 @@ body {
             align-items: center;
             font-weight: 700;
             font-size: inherit;
-            color: #FFFFFF;
+            color: $white;
             height: 100%;
           }
 
@@ -173,7 +173,7 @@ body {
         background: $gray;
         padding-left: 15px;
         color: $white;
-        border: 1px solid #7D7D7D;
+        border: 1px solid $gray-light;
 
         &:focus {
           border-color: $primary-color;
@@ -184,7 +184,7 @@ body {
         width: 40px;
         height: 100%;
         background: $gray;
-        border: 1px solid #7D7D7D;
+        border: 1px solid $gray-light;
         border-left: none;
       }
     }
@@ -211,33 +211,19 @@ body {
       .catalog_title_h1-wrapper {
         margin-bottom: 25px;
 
-        .title-h1 {
-          font-size: rem(32);
-          font-weight: 700;
-          color: $white;
-          margin: 0;
-        }
       }
 
       .catalog_title_h3-wrapper {
         margin-bottom: 50px;
-
-        .title-h3 {
-          font-family: Montserrat, sans-serif;
-          font-size: rem(16);
-          font-weight: 400;
-          color: $white;
-        }
       }
 
       .catalog-button {
         @include flexible ();
+        @include title($white, rem(14), 400);
         width: 160px;
         height: 40px;
-        color: #FFFFFF;
-        font-size: rem(14);
         border-radius: 36px;
-        border: 1px solid #FFFFFF;
+        border: 1px solid $white;
         position: relative;
         padding-right: 35px;
 
@@ -288,8 +274,7 @@ body {
       }
 
       .customer-title {
-        font-size: rem(16);
-        font-weight: 700;
+        @include title($gray, rem(16), 700);
         margin-bottom: 15px;
       }
 
@@ -314,8 +299,7 @@ body {
       align-items: center;
       justify-content: center;
       width: 200px;
-      font-weight: 700;
-      font-size: rem(20);
+      @include title($gray, rem(20), 700);
       padding-bottom: 15px;
       position: relative;
 
@@ -448,8 +432,7 @@ body {
           width: 160px;
           height: 40px;
           border: none;
-          font-size: rem(12);
-          font-weight: 700;
+          @include title($gray, rem(12), 700);
           background: $yellow;
           border-radius: 36px;
           position: relative;
@@ -520,9 +503,7 @@ body {
 
           .magazine-title {
             font-family: Montserrat, sans-serif;
-            font-weight: 700;
-            font-size: rem(20);
-            color: $white;
+            @include title($white, rem(20), 700);
             margin-bottom: 15px;
 
           }
@@ -590,13 +571,12 @@ body {
             bottom: 0;
             left: 64px;
             background: url(../../build/img/catalog_arrow.svg);
+            transition: 1s;
           }
 
           .magazine-title {
             font-family: Montserrat, sans-serif;
-            font-weight: 700;
-            font-size: rem(20);
-            color: $white;
+            @include title($white, rem(20), 700);
             margin-bottom: 15px;
           }
         }
@@ -605,9 +585,8 @@ body {
   }
 }
 
-.pay_slider-wrapper{
-
-  .pay_slider-body{
+.pay_slider-wrapper {
+  .pay_slider-body {
     width: 1105px;
     display: flex;
     justify-content: space-between;
@@ -615,15 +594,9 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     position: relative;
-
-    .pay_slider-block{
-
-      .slider__image-item{
-
-      }
-    }
   }
 }
+
 /*slider*/
 .slider-container {
   position: relative;
@@ -636,38 +609,37 @@ body {
 }
 
 .slider__image-item {
-  //flex: 0 0 17%;
   flex: 0 0 196px;
 }
 
 .slider__arrow-control {
   position: absolute;
   top: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  @include flexible();
+  color: $white;
   text-align: center;
   opacity: 0.5;
 }
-.slider__arrow-control:active{
+
+.slider__arrow-control:active {
   transform: inherit;
   filter: inherit;
 }
+
 .slider__arrow-control:hover,
 .slider__arrow-control:focus {
-  color: #fff;
+  color: $white;
   text-decoration: none;
   outline: 0;
   opacity: .9;
 }
 
 .slider__arrow-control_left {
-  left: 120px;
+  left: 0;
 }
 
 .slider__arrow-control_right {
-  right: 120px;
+  right: 0;
 }
 
 .slider__arrow-control::before {
@@ -686,21 +658,187 @@ body {
 .slider__arrow-control_right::before {
   background-image: url(../img/slider_arrow-right.svg);
 }
-//.progress-wrapper{
-//  width: 100%;
-//  height: 8px;
-//  background: #ccc;
-//  left: 0;
-//  top: 0;
-//  right: 0;
-//  position: fixed;
-//  z-index: 1;
-//}
-//.progress-bar{
-//  height: 8px;
-//  background: #4caf50;
-//  width: 0;
-//}
+
+.mailing-wrapper {
+  width: 100%;
+  height: 242px;
+  background: url(../img/bg-weaving.jpg) no-repeat center;
+  background-size: cover;
+  margin-top: 45px;
+
+  .mailing-body {
+    width: 1180px;
+    height: 100%;
+    @include flexBetween();
+    margin: 0 auto;
+
+    .mailing-title {
+      @include title($yellow, rem(32), 700);
+      margin-bottom: 10px;
+    }
+
+    .mailing-form {
+      width: 580px;
+      height: 90px;
+      @include flexible();
+      background: #FFFFFFE0;
+      border-radius: 232px;
+
+      .mailing-input {
+        width: 256px;
+        height: 35px;
+        border: none;
+        border-bottom: 1px solid $gray-light;
+        background-color: transparent;
+        margin-left: 15px;
+        padding-left: 5px;
+      }
+
+      .mailing-button {
+        @include title($white, rem(12), 700);
+        width: 200px;
+        height: 40px;
+        border: none;
+        background: #5FC44B;
+        border-radius: 36px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+.news-wrapper {
+  width: 100%;
+  background: #F3F3F3;
+
+  .news-body {
+    padding-top: 55px;
+
+    .news-title {
+      @include title($gray, rem(20), 700);
+      text-align: center;
+    }
+    .news-content {
+      width: 100%;
+      @include flexBetween();
+      margin: 0 auto;
+      margin-top: 30px;
+      padding-bottom: 30px;
+      .news-block {
+        width: 300px;
+        height: 350px;
+        background: $white;
+        padding: 10px;
+        .news-link {
+          display: block;
+          width: 280px;
+          height: 164px;
+          margin: 0 auto;
+          .news-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .news-caption {
+          padding: 20px 10px 15px 10px;
+          .news_caption-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+          }
+          .news_caption-time {
+            color: $ease-gray;
+          }
+          .news_caption-content {
+            margin-top: 7px;
+            line-height: 22px;
+            font-size: rem(12);
+          }
+        }
+      }
+    }
+
+    .all_news-button-wrapper {
+
+      .all_news-link {
+        width: 193px;
+        height: 40px;
+        @include flexible();
+        border: 1px solid $gray;
+        border-radius: 36px;
+        font-size: rem(12);
+        margin: 0 auto;
+        padding-right: 25px;
+        position: relative;
+
+        &:hover::after{
+          transform: rotate(360deg);
+          transition: 1s;
+        }
+
+        &:after{
+          content: '';
+          position: absolute;
+          right: 5px;
+          top: 6px;
+          width: 24px;
+          height: 24px;
+          background: url(../img/news_icon.svg) no-repeat center;
+          transition: 1s;
+        }
+      }
+    }
+
+    .ceo-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 55px;
+      padding-bottom: 60px;
+      .ceo-title {
+        @include title($gray, rem(20), 700);
+        margin-bottom: 20px;
+      }
+      .ceo-text{
+        @include title($gray-light, rem(12), 400);
+        line-height: 21px;
+        .ceo-text-p{
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.title-h1 {
+  @include title($white, rem(32), 700);
+  margin: 0;
+}
+
+.title-h2 {
+  @include title($white, rem(22), 700);
+}
+
+.title-h3 {
+  font-family: Montserrat, sans-serif;
+  @include title($white, rem(16), 400);
+}
+
+.progress-wrapper {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.progress-bar {
+  height: 8px;
+  background: $yellow;
+  width: 0;
+}
 
 /*burger_menu*/
 .header-mobile {
@@ -722,14 +860,14 @@ body {
 .header-mobile-button-line,
 .header-mobile-button-line-active {
   width: 100%;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid $white;
   position: absolute;
   top: 10px;
   transition: 0.3s;
 }
 
 .header-mobile-button-line-active {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid $white;
 }
 
 .header-mobile-button-line:nth-child(1) {
@@ -801,7 +939,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: $white;
 }
 
 #floatingCirclesG {

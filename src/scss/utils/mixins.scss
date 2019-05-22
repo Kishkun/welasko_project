@@ -16,20 +16,39 @@
 }
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
 }
 
-@mixin flexible () {
+@mixin flexible() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flexBetween () {
+@mixin flexBetween() {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@mixin flexStart() {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin title($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
 }
