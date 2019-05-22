@@ -22,7 +22,8 @@ const sassFiles = [
 ];
 
 const jsFiles = [
-    './src/js/script.js'
+    './src/js/script.js',
+    './src/js/slider.js'
 ];
 
 const imgFiles = [
